@@ -1,0 +1,39 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+### VS Code ###
+.vscode/
+
+### Kaniko temp files ###
+cbis-template.json
+kaniko-template.json
+/gateway/mvnw
+/gateway/mvnw.cmd
+/gateway/.mvn/wrapper/maven-wrapper.jar
+/gateway/.mvn/wrapper/maven-wrapper.properties
