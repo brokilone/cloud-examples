@@ -13,18 +13,22 @@ import reactor.core.publisher.Mono;
 @SpringBootApplication
 public class GatewayApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(GatewayApplication.class, args);
-	}
+  public static void main(String[] args) {
+    SpringApplication.run(GatewayApplication.class, args);
+  }
 
-	@GetMapping(value = "/token")
-	public Mono<String> getHome(@RegisteredOAuth2AuthorizedClient OAuth2AuthorizedClient authorizedClient) {
-		return Mono.just(authorizedClient.getAccessToken().getTokenValue());
-	}
+  @GetMapping(value = "/token")
+  public Mono<String> getHome(@RegisteredOAuth2AuthorizedClient OAuth2AuthorizedClient authorizedClient) {
+    return Mono.just(authorizedClient.getAccessToken().getTokenValue());
+  }
 
-	@GetMapping("/")
-	public Mono<String> index(WebSession session) {
-		return Mono.just(session.getId());
-	}
+  @GetMapping("/")
+  public Mono<String> index(WebSession session) {
+    return Mono.just(session.getId());
+  }
 
+  @GetMapping("/test")
+  public Mono<String> corsTest() {
+    return Mono.just("{\"body\":\"cors\"}");
+  }
 }

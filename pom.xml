@@ -11,6 +11,7 @@
     <modules>
         <module>gateway</module>
         <module>simple-service</module>
+        <module>frontend-mock</module>
     </modules>
     <packaging>pom</packaging>
 </project>
